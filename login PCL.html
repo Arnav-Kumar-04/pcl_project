@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AI Coach</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        .nav-link {
+            color: #ffffff; /* White color for navigation links */
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+        .nav-link:hover {
+            color: #4F46E5; /* Change color on hover */
+        }
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #d1d5db;
+        }
+        .form-submit {
+            background-color: #4F46E5;
+            color: white;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .form-submit:hover {
+            background-color: #4338CA;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navigation bar -->
+    <nav class="bg-gray-900 text-white py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div>
+                <img src="1.jpg" alt="AI COACH" class="w-12 h-12 rounded-full">
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="overview PCL.html" class="nav-link">Overview</a>
+                <a href="about PCL.html" class="nav-link">About</a>
+                <a href="product PCL.html" class="nav-link">Product</a>
+                <a href="signup PCL.html" class="nav-link">Sign Up</a>
+                <a href="login PCL.html" class="nav-link">Login</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Login form -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto form-container">
+            <h2 class="text-2xl font-bold mb-8 text-center">Login to Your Fitness World</h2>
+            <form action="#" method="POST">
+                <input type="email" name="email" placeholder="Email Address" class="form-input">
+                <input type="password" name="password" placeholder="Password" class="form-input">
+                <button type="submit" class="form-submit w-full">Login</button>
+            </form>
+            <p class="text-center text-sm mt-4">Don't have an account? <a href="signup PCL.html" class="text-blue-500 hover:underline">Sign Up</a></p>
+            <div class="text-center mt-4">
+                <p class="text-sm">Or login with</p>
+                <a href="#" class="inline-block bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-lg mt-2">Google</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="bg-gray-900 text-white py-8 text-center">
+        <div class="container mx-auto">
+            <h3 class="text-xl">&copy; 2024 AI COACH. All rights reserved.</h3>
+        </div>
+    </footer>
+</body>
+</html>
