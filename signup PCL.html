@@ -57,10 +57,19 @@
 </head>
 <body class="font-sans">
     <!-- Navigation bar -->
-    <nav class="bg-gray-900 text-white py-4">
+    <nav class="bg-gray-900 text-white py-2">
         <div class="container mx-auto flex justify-between items-center px-4">
             <div>
-                <img src="1.jpg" alt="AI COACH" class="w-12 h-12 rounded-full">
+                <button style="border: none; background: none; padding: 0; cursor: pointer;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="300" height="80" viewBox="0 0 400 100">
+                      <text x="0" y="60" class="logo-text animate__animated animate__fadeIn"
+                            font-family="Arial, sans-serif" font-size="50" fill="#155263" font-weight="bold">AI</text>
+                      <text x="70" y="60" class="logo-text animate__animated animate__fadeIn"
+                            font-family="Arial, sans-serif" font-size="50" fill="#fac70b" font-weight="bold">COACH</text>
+                      <animate attributeName="opacity" dur="1s" values="0;1" repeatCount="1" />
+                    </svg>
+                  </button>
+                  
             </div>
             <div class="flex items-center space-x-4">
                 <a href="overview PCL.html" class="nav-link">Overview</a>
@@ -85,7 +94,7 @@
             <p class="text-center text-sm mt-4">Already have an account? <a href="login PCL.html" class="text-blue-500 hover:underline">Login</a></p>
             <div class="text-center mt-4">
                 <p class="text-sm">Or sign up with</p>
-                <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg mt-2 font-bold">Google</a>
+                <a href="#" class="inline-block bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-lg mt-2 font-bold">Google</a>
             </div>
         </div>
     </section>
@@ -93,7 +102,7 @@
     <!-- Footer section -->
     <footer class="bg-gray-900 text-white py-8 text-center">
         <div class="container mx-auto">
-            <h3 class="text-xl">&copy; 2024 CostarAI. All rights reserved.</h3>
+            <h3 class="text-xl">&copy; 2024 AI Coach. All rights reserved.</h3>
         </div>
     </footer>
 </body>

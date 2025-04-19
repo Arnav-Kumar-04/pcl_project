@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - AI Coach</title>
+    <title>Try Now - AI COACH</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         /* Custom styles */
@@ -17,28 +17,39 @@
         .nav-link:hover {
             color: #4F46E5; /* Change color on hover */
         }
-        .form-container {
-            max-width: 500px;
-            margin: 0 auto;
+        .trynow-section {
+            background-color: #F3F4F6;
         }
-        .form-input {
-            width: 100%;
-            padding: 0.75rem;
-            margin-bottom: 1rem;
-            border-radius: 0.5rem;
-            border: 1px solid #d1d5db;
-        }
-        .form-submit {
+        .trynow-btn {
             background-color: #4F46E5;
             color: white;
-            padding: 0.75rem;
+            padding: 0.75rem 2rem;
             border-radius: 0.5rem;
             border: none;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-        .form-submit:hover {
+        .trynow-btn:hover {
             background-color: #4338CA;
+            animation: heartbeat 1s infinite;
+        }
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        /* Additional Features section */
+        .feature-card {
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
         }
     </style>
 </head>
@@ -68,19 +79,32 @@
         </div>
     </nav>
     
-    <!-- Login form -->
-    <section class="bg-gray-100 py-16">
-        <div class="container mx-auto form-container">
-            <h2 class="text-2xl font-bold mb-8 text-center">Login to Your Fitness World</h2>
-            <form action="#" method="POST">
-                <input type="email" name="email" placeholder="Email Address" class="form-input">
-                <input type="password" name="password" placeholder="Password" class="form-input">
-                <button type="submit" class="form-submit w-full">Login</button>
-            </form>
-            <p class="text-center text-sm mt-4">Don't have an account? <a href="signup PCL.html" class="text-blue-500 hover:underline">Sign Up</a></p>
-            <div class="text-center mt-4">
-                <p class="text-sm">Or login with</p>
-                <a href="#" class="inline-block bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-lg mt-2 font-bold">Google</a>
+    <!-- Try Now section -->
+    <section class="trynow-section py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-2xl font-bold mb-8">Get Started with Our Coach</h2>
+            <p class="text-lg mb-8">Join with friends in an AI environment and achieve greater heights.</p>
+            <a href="#" class="trynow-btn">Try Now</a>
+        </div>
+    </section>
+
+    <!-- Additional Features section -->
+    <section class="py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-2xl font-bold mb-8">Additional Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-4 border rounded shadow-md feature-card">
+                    <h3 class="text-xl font-semibold mb-4">AI Chat Assistance</h3>
+                    <p class="text-gray-700">Get instant help and guidance from an AI chatbot assistant.</p>
+                </div>
+                <div class="p-4 border rounded shadow-md feature-card">
+                    <h3 class="text-xl font-semibold mb-4">Document Summarization</h3>
+                    <p class="text-gray-700">Quickly summarize lengthy documents to get key insights in seconds.</p>
+                </div>
+                <div class="p-4 border rounded shadow-md feature-card">
+                    <h3 class="text-xl font-semibold mb-4">Language Translation</h3>
+                    <p class="text-gray-700">Translate text between multiple languages with high accuracy.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -88,7 +112,7 @@
     <!-- Footer section -->
     <footer class="bg-gray-900 text-white py-8 text-center">
         <div class="container mx-auto">
-            <h3 class="text-xl">&copy; 2024 AI COACH. All rights reserved.</h3>
+            <h3 class="text-xl">&copy; 2024 CostarAI. All rights reserved.</h3>
         </div>
     </footer>
 </body>
