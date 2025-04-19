@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI COACH - Fitness App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .hero {
+            background: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+        }
+        .button-primary {
+            background-color: #4F46E5;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .button-primary:hover {
+            background-color: #4338CA;
+            transform: translateY(-1px);
+        }
+
+        /* Animation for the header */
+        @keyframes changeColor {
+            0% { color: #4F46E5; }
+            25% { color: #8B5CF6; }
+            50% { color: #EC4899; }
+            75% { color: #F59E0B; }
+            100% { color: #10B981; }
+        }
+
+        .colorful-heading {
+            animation: changeColor 5s infinite;
+        }
+
+        /* Initially hide arrows */
+        .carousel-arrow {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        /* Show arrows when features section is in view */
+        .features-visible .carousel-arrow {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-100">
+
+    <!-- Navigation -->
+    <nav class="bg-gray-900 text-white py-4">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <div>
+                <button style="border: none; background: none; padding: 0; cursor: pointer;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="300" height="80" viewBox="0 0 400 100">
+                        <text x="0" y="60" font-family="Arial, sans-serif" font-size="50" fill="#155263" font-weight="bold">Go </text>
+                        <text x="70" y="60" font-family="Arial, sans-serif" font-size="50" fill="#fac70b" font-weight="bold">Fit</text>
+                    </svg>
+                </button>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#features" class="text-white">Features</a>
+                <a href="#testimonials" class="text-white">Testimonials</a>
+                <a href="overview.html" class="text-white">Log Out</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero flex items-center justify-center text-center bg-gray-900 text-white py-20 px-4">
+        <div class="space-y-6 max-w-2xl">
+            <h1 class="text-7xl font-extrabold leading-tight colorful-heading">Your AI-Powered Fitness Coach</h1>
+            <p class="text-2xl max-w-xl mx-auto text-black">Reach your fitness goals with personalized plans, AI guidance, and motivational support tailored to you.</p>
+        </div>
+    </section>
+    
+    <section id="features" class="py-20 bg-gradient-to-br from-white to-gray-100">
+        <div class="container mx-auto text-center px-6">
+          <h2 class="text-4xl font-extrabold mb-10 text-gray-800">Check out our key features</h2>
+      
+          <!-- Carousel Container -->
+          <div class="relative max-w-xl mx-auto overflow-hidden">
+            <!-- Inner Track -->
+            <div id="carousel-track" class="flex transition-transform duration-500">
+              <!-- Slide 1 -->
+              <div class="min-w-full p-6">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-indigo-500">
+                  <div class="text-4xl mb-4 text-indigo-500">💡</div>
+                  <h3 class="text-2xl font-semibold mb-3 text-gray-800">AI-Powered Workouts</h3>
+                  <p class="text-gray-600">Personalized plans that adapt to your progress. Stay motivated with dynamic routines!</p>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="min-w-full p-6">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-pink-500">
+                  <div class="text-4xl mb-4 text-pink-500">📊</div>
+                  <h3 class="text-2xl font-semibold mb-3 text-gray-800">Progress Tracking</h3>
+                  <p class="text-gray-600">Track your workouts, monitor improvements, and visualize your journey.</p>
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="min-w-full p-6">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-green-500">
+                  <div class="text-4xl mb-4 text-green-500">🤝</div>
+                  <h3 class="text-2xl font-semibold mb-3 text-gray-800">Social Motivation</h3>
+                  <p class="text-gray-600">Challenge friends and stay accountable with a strong fitness tribe.</p>
+                </div>
+              </div>
+              <!-- Slide 4 -->
+              <div class="min-w-full p-6">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-yellow-500 cursor-pointer" onclick="window.location.href='smartworkoutscheduler.html'">
+                  <div class="text-4xl mb-4 text-yellow-500">⏰</div>
+                  <h3 class="text-2xl font-semibold mb-3 text-gray-800">Smart Workout Scheduler</h3>
+                  <p class="text-gray-600">Plan your week effortlessly with personalized scheduling and recovery.</p>
+                </div>
+              </div>
+              <!-- Slide 5 - New Water Intake Tracker -->
+              <div class="min-w-full p-6">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-blue-500 cursor-pointer" onclick="window.location.href='smartwatertracker.html'">
+                  <div class="text-4xl mb-4 text-blue-500">💧</div>
+                  <h3 class="text-2xl font-semibold mb-3 text-gray-800">Smart Water Intake Tracker</h3>
+                  <p class="text-gray-600">Stay hydrated with personalized water intake goals and reminders throughout your day.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+      
+            <!-- Arrows -->
+            <button id="prevBtn" class="carousel-arrow fixed left-8 top-1/2 z-50 transform -translate-y-1/2 bg-white p-3 text-xl shadow-md rounded-full hover:bg-gray-200 transition">
+                ◀
+            </button>
+
+            <button id="nextBtn" class="carousel-arrow fixed right-8 top-1/2 z-50 transform -translate-y-1/2 bg-white p-3 text-xl shadow-md rounded-full hover:bg-gray-200 transition">
+                ▶
+            </button>
+          </div>
+        </div>
+      </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gray-50">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8">What Our Users Say</h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                <!-- Testimonial 1 -->
+                <div class="w-full md:w-1/3 p-6 bg-white rounded-lg shadow-lg">
+                    <p class="text-lg italic">"This app has completely transformed my fitness routine! The AI workouts are perfect for my level, and I love seeing my progress."</p>
+                    <p class="mt-4 font-semibold">Jane D.</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="w-full md:w-1/3 p-6 bg-white rounded-lg shadow-lg">
+                    <p class="text-lg italic">"I've never been this motivated! The challenges with friends keep me on track, and the workout plans are tailored to my needs."</p>
+                    <p class="mt-4 font-semibold">Mark T.</p>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="w-full md:w-1/3 p-6 bg-white rounded-lg shadow-lg">
+                    <p class="text-lg italic">"I love the recovery tips and the mindfulness exercises. It's like having a personal coach guiding me every step of the way."</p>
+                    <p class="mt-4 font-semibold">Sarah W.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let currentSlide = 0;
+        const track = document.getElementById("carousel-track");
+        const totalSlides = track.children.length;
+        
+        function updateSlide() {
+          track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+        
+        document.getElementById("prevBtn").addEventListener("click", () => {
+          currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+          updateSlide();
+        });
+        
+        document.getElementById("nextBtn").addEventListener("click", () => {
+          currentSlide = (currentSlide + 1) % totalSlides;
+          updateSlide();
+        });
+        
+        // Auto-scroll every 6 seconds
+        setInterval(() => {
+          currentSlide = (currentSlide + 1) % totalSlides;
+          updateSlide();
+        }, 6000);
+
+        // Intersection Observer to show/hide arrows
+        const featuresSection = document.getElementById('features');
+        const arrows = document.querySelectorAll('.carousel-arrow');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    document.body.classList.add('features-visible');
+                } else {
+                    document.body.classList.remove('features-visible');
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        observer.observe(featuresSection);
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 text-center">
+        <div class="container mx-auto">
+            <p>&copy; 2025 Go Fit. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
